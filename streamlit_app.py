@@ -1,6 +1,6 @@
 import streamlit as st # Import python packages
-from snowflake.snowpark.context import get_active_session
-session = get_active_session() # Get the current credentials
+cnx = st.connection("snowflake")
+session = cnx.session()
 
 import pandas as pd
 
